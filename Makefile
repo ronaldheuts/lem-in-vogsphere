@@ -6,7 +6,7 @@
 #    By: mvan-hou <mvan-hou@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/08/07 18:24:45 by mvan-hou      #+#    #+#                  #
-#    Updated: 2020/08/07 18:25:01 by mvan-hou      ########   odam.nl          #
+#    Updated: 2020/08/07 19:34:19 by mvan-hou      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ clean:
 	@rm -f $(OBJS)
 
 fclean: clean
+	@$(MAKE) -C libft/ fclean
 	@rm -f $(NAME) libft/libft.a
 
 re: fclean all
