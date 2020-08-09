@@ -6,7 +6,7 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/29 16:40:10 by anonymous     #+#    #+#                 */
-/*   Updated: 2020/08/07 16:35:03 by mvan-hou      ########   odam.nl         */
+/*   Updated: 2020/08/09 10:42:34 by rheuts        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ t_pnode		*start_end_path(t_data *lemin)
 	path->room = lemin->end;
 	path->head = path;
 	path->next = NULL;
+	path->prev = NULL;
 	return (path);
 }
 
