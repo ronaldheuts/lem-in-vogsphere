@@ -6,7 +6,7 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/29 12:01:10 by anonymous     #+#    #+#                 */
-/*   Updated: 2020/08/03 17:12:56 by mvan-hou      ########   odam.nl         */
+/*   Updated: 2020/08/18 12:07:44 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ int			algorithm(t_data *lemin)
 		remove_link(lemin->start, lemin->end);
 	while (1)
 	{
-		create_levels(lemin->end, lemin->start, lemin);
+		if (create_levels(lemin->end, lemin->start, lemin) == -1)
+			return (-1);
 		lemin->paths = compare(lemin);
 		lemin->iter++;
 		if (!redirect(lemin))

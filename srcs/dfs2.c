@@ -6,7 +6,7 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/29 16:40:10 by anonymous     #+#    #+#                 */
-/*   Updated: 2020/08/09 10:42:34 by rheuts        ########   odam.nl         */
+/*   Updated: 2020/08/18 12:09:59 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ t_pnode		*start_end_path(t_data *lemin)
 	t_pnode	*path;
 
 	path = (t_pnode*)malloc(sizeof(t_pnode));
+	if (!path)
+		exit(0);
 	path->ant_id = 0;
 	path->room = lemin->end;
 	path->head = path;
@@ -47,6 +49,8 @@ t_pnode		*new_node(t_room *room, t_pnode *next)
 	t_pnode	*new;
 
 	new = (t_pnode*)malloc(sizeof(t_pnode));
+	if (!new)
+		exit(0);
 	new->room = room;
 	new->next = next;
 	new->prev = NULL;
@@ -58,6 +62,8 @@ t_path		*new_path(void)
 	t_path	*path;
 
 	path = (t_path*)malloc(sizeof(t_path));
+	if (!path)
+		exit(0);
 	path->ants = 0;
 	path->path = NULL;
 	return (path);

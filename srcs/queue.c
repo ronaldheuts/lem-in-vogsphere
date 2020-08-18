@@ -6,7 +6,7 @@
 /*   By: anonymous <anonymous@student.codam.nl>       +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/05/29 21:36:57 by anonymous     #+#    #+#                 */
-/*   Updated: 2020/07/29 16:33:15 by anonymous     ########   odam.nl         */
+/*   Updated: 2020/08/18 12:01:58 by anonymous     ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int		add_item(t_queue *queue, t_link *link)
 	t_link	*item;
 
 	item = (t_link*)malloc(sizeof(t_link));
-	item->room = link->room;
 	if (!item)
 		return (-1);
+	item->room = link->room;
 	if (queue->len == 0)
 	{
 		queue->head = item;
