@@ -6,7 +6,7 @@
 /*   By: rheuts <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/03/12 17:57:25 by rheuts        #+#    #+#                 */
-/*   Updated: 2020/08/18 12:32:25 by rheuts        ########   odam.nl         */
+/*   Updated: 2020/08/18 12:38:42 by rheuts        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		main(void)
 
 	input = newmap();
 	if (!check_input(input, &lemin))
-		exit (0);
+		exit(0);
 	clean_map(lemin);
 	algorithm(lemin);
 	if (lemin->max < 1 || !get_path_data(lemin->paths->path))
