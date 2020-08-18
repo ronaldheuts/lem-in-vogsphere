@@ -6,7 +6,7 @@
 /*   By: rheuts <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/03/12 17:51:23 by rheuts        #+#    #+#                 */
-/*   Updated: 2020/08/07 18:29:12 by rheuts        ########   odam.nl         */
+/*   Updated: 2020/08/18 11:11:25 by rheuts        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int		iscoordinate(char *s, int *i)
 	if (s[*i] != ' ')
 		return (0);
 	(*i)++;
+	if (!ft_isdigit(s[*i]))
+		return (0);
 	while (s[*i] && s[*i] != ' ')
 	{
 		if (!ft_isdigit(s[*i]))
